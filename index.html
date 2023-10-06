@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+    .dot {
+      position: absolute;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .dot2 {
+      position: absolute;
+      font-size: 3rem;
+      color: red;
+      font-family: 'Noto Serif KR', serif;
+    }
+    .serif {
+      font-family: 'Noto Serif KR', serif;
+    }
+  </style>
+</head>
+<body>
+<script src="text.js"></script>
+<script type="text/javascript">
+  let b = a.split(" ");
+  let c = 0;
+  let d = 0;
+
+  let isSans = true;
+
+  window.onmousemove = function(e) {
+    if (c % 10 == 0) {
+      let dot = document.createElement('div');
+      dot.className = isSans ? 'dot' : 'dot serif';
+      dot.style.left = e.clientX + 'px';
+      dot.style.top = e.clientY + 'px';
+      dot.innerText = b[d] || '';  // Set empty string if b[d] is undefined
+      document.body.appendChild(dot);
+      d = (d + 1) % b.length;  // Cycle through the text array
+    }
+    c++;
+  }
+
+  window.onclick = function(e) {
+    isSans = !isSans;
+  }
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+    .dot {
+      position: absolute;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    .dot2 {
+      position: absolute;
+      font-size: 3rem;
+      color: red;
+      font-family: 'Noto Serif KR', serif;
+    }
+    .serif {
+      font-family: 'Noto Serif KR', serif;
+    }
+  </style>
+</head>
+<body>
+<script src="text.js"></script>
+<script type="text/javascript">
+  let b = a.split(" ");
+  let c = 0;
+  let d = 0;
+
+  let isSans = true;
+
+  window.onmousemove = function(e) {
+    if (c % 10 == 0) {
+      let dot = document.createElement('div');
+      dot.className = isSans ? 'dot' : 'dot serif';
+      dot.style.left = e.clientX + 'px';
+      dot.style.top = e.clientY + 'px';
+      dot.innerText = b[d] || '';  // Set empty string if b[d] is undefined
+      document.body.appendChild(dot);
+      d = (d + 1) % b.length;  // Cycle through the text array
+    }
+    c++;
+  }
+
+  window.onclick = function(e) {
+    isSans = !isSans;
+  }
+</script>
+</body>
+</html>
